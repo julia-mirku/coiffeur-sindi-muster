@@ -681,6 +681,33 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 .hero .h-addr svg{width:18px;height:18px;flex:none;color:#CFA95C}
 @media (max-width:599px){.hero .h-addr{font-size:15px;margin:-4px 0 12px}}
 @media (max-height:500px) and (orientation:landscape){.hero .h-addr{margin:0 0 6px;font-size:15px}}
+/* Tage interaktiv (21.11) */
+.hours{display:block;margin:6px auto 10px;width:max-content;max-width:100%}
+.hours .hrow{display:grid;grid-template-columns:5.2em 8.6em;column-gap:12px;width:100%;font:inherit;color:inherit;background:none;
+  border:1.5px dashed transparent;border-radius:3px;padding:1px 8px;margin:1px 0;cursor:pointer;transition:border-color .2s ease,color .2s ease;line-height:1.55}
+.hours .hrow span:first-child{text-align:right}
+.hours .hrow span:last-child{text-align:left}
+.hours .hrow.sel{border-style:solid;border-color:#B08A3E;color:var(--paper-ink)}
+.hours .hrow:focus-visible{outline:2px solid #B08A3E;outline-offset:2px}
+.v-time{align-items:flex-start}
+.v-days{display:flex;flex-direction:column;gap:10px}
+.days{display:flex;flex-wrap:wrap;gap:6px}
+.days .day{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:14px;font-weight:600;letter-spacing:.04em;min-width:42px;height:38px;padding:0 6px;
+  background:transparent;color:var(--ink);border:1.5px dashed transparent;border-radius:4px;cursor:pointer;transition:border-color .2s ease,color .2s ease,background-color .2s ease}
+.days .day[data-d="0"],.days .day[data-d="1"]{color:var(--muted)}
+.days .day.sel{border-style:solid;border-color:#CFA95C;color:#CFA95C;background:rgba(207,169,92,.1)}
+.days .day:focus-visible{outline:2px solid #CFA95C;outline-offset:2px}
+.day-out{margin:0;font-size:16px;color:var(--ink);font-weight:600}
+.day-out.closed{color:var(--muted)}
+@media (max-width:599px){.days .day{min-width:38px;height:40px;font-size:13px}.days{gap:4px}}
+@media (hover:hover) and (pointer:fine){
+  .days .day:hover:not(.sel){border-color:rgba(207,169,92,.85)}
+  .hours .hrow:hover:not(.sel){border-color:var(--paper-ink)}
+}
+@media (max-width:359px){.days .day{min-width:32px;padding:0 3px}.days{gap:3px}}
+.days{flex-wrap:nowrap;gap:4px}.days .day{min-width:36px;padding:0 4px}
+.v-time .day-out{color:var(--ink)}.v-time .day-out.closed{color:var(--muted)}
+@media (max-width:359px){.days .day{min-width:32px;padding:0 3px}.days{gap:3px}}
 </style>
 </head>
 <body>
@@ -746,7 +773,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
               <hr class="rule">
               <div class="t-foot">
                 <p class="big">Wir freuen uns auf Sie</p>
-                <div class="hours"><span>Di–Fr</span><span>09.00–19.00</span><span>Sa</span><span>09.00–18.00</span><span>So, Mo</span><span>geschlossen</span></div>
+                <div class="hours" role="group" aria-label="Öffnungszeiten"><button type="button" class="hrow" data-days="2,3,4,5"><span>Di–Fr</span><span>09.00–19.00</span></button><button type="button" class="hrow" data-days="6"><span>Sa</span><span>09.00–18.00</span></button><button type="button" class="hrow" data-days="0,1"><span>So, Mo</span><span>geschlossen</span></button></div>
                 <svg class="barcode" viewBox="0 0 238 40" preserveAspectRatio="none" fill="currentColor" aria-hidden="true"><rect x="0" width="1" height="40"/><rect x="2" width="2" height="40"/><rect x="5" width="1" height="40"/><rect x="9" width="1" height="40"/><rect x="12" width="2" height="40"/><rect x="15" width="2" height="40"/><rect x="18" width="1" height="40"/><rect x="20" width="2" height="40"/><rect x="24" width="1" height="40"/><rect x="26" width="1" height="40"/><rect x="30" width="2" height="40"/><rect x="33" width="4" height="40"/><rect x="40" width="1" height="40"/><rect x="42" width="3" height="40"/><rect x="48" width="1" height="40"/><rect x="52" width="2" height="40"/><rect x="56" width="1" height="40"/><rect x="58" width="1" height="40"/><rect x="62" width="4" height="40"/><rect x="67" width="1" height="40"/><rect x="70" width="1" height="40"/><rect x="74" width="1" height="40"/><rect x="78" width="1" height="40"/><rect x="82" width="4" height="40"/><rect x="87" width="1" height="40"/><rect x="91" width="2" height="40"/><rect x="94" width="1" height="40"/><rect x="96" width="2" height="40"/><rect x="99" width="2" height="40"/><rect x="102" width="2" height="40"/><rect x="105" width="2" height="40"/><rect x="110" width="2" height="40"/><rect x="114" width="2" height="40"/><rect x="119" width="2" height="40"/><rect x="123" width="1" height="40"/><rect x="125" width="4" height="40"/><rect x="130" width="3" height="40"/><rect x="134" width="1" height="40"/><rect x="138" width="1" height="40"/><rect x="142" width="2" height="40"/><rect x="146" width="3" height="40"/><rect x="151" width="1" height="40"/><rect x="155" width="1" height="40"/><rect x="157" width="2" height="40"/><rect x="161" width="1" height="40"/><rect x="164" width="1" height="40"/><rect x="167" width="2" height="40"/><rect x="170" width="3" height="40"/><rect x="174" width="4" height="40"/><rect x="181" width="2" height="40"/><rect x="185" width="1" height="40"/><rect x="188" width="2" height="40"/><rect x="192" width="2" height="40"/><rect x="196" width="1" height="40"/><rect x="198" width="1" height="40"/><rect x="201" width="3" height="40"/><rect x="205" width="1" height="40"/><rect x="208" width="3" height="40"/><rect x="214" width="3" height="40"/><rect x="219" width="1" height="40"/><rect x="222" width="3" height="40"/><rect x="227" width="1" height="40"/><rect x="230" width="1" height="40"/><rect x="232" width="2" height="40"/><rect x="235" width="2" height="40"/></svg>
               </div>
             </div>
@@ -830,7 +857,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
       <h2 id="h-visit">Besuchen Sie uns</h2>
       <p class="v-addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Herisauerstrasse&nbsp;22<br>9200&nbsp;Gossau</span></p>
       <p class="v-tel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+41713850303">071 385 03 03</a></p>
-      <p class="v-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Di–Fr 09.00–19.00<br>Sa 09.00–18.00</span></p>
+      <div class="v-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div class="v-days"><div class="days" role="radiogroup" aria-label="Öffnungszeiten nach Tag"><button type="button" class="day" role="radio" aria-checked="false" data-d="1">Mo</button><button type="button" class="day" role="radio" aria-checked="false" data-d="2">Di</button><button type="button" class="day" role="radio" aria-checked="false" data-d="3">Mi</button><button type="button" class="day" role="radio" aria-checked="false" data-d="4">Do</button><button type="button" class="day" role="radio" aria-checked="false" data-d="5">Fr</button><button type="button" class="day" role="radio" aria-checked="false" data-d="6">Sa</button><button type="button" class="day" role="radio" aria-checked="false" data-d="0">So</button></div><p class="day-out" id="day-out" aria-live="polite">Di–Fr 09.00–19.00 · Sa 09.00–18.00</p></div></div>
       <a class="v-route" href="https://www.google.com/maps/search/?api=1&amp;query=Coiffeur+Sindi+Herisauerstrasse+22+Gossau" target="_blank" rel="noopener">Route planen →</a>
     </div>
     <a class="gx-frame v-map v-mapimg" href="https://www.google.com/maps/search/?api=1&amp;query=Coiffeur+Sindi+Herisauerstrasse+22+Gossau" target="_blank" rel="noopener" aria-label="In Google Maps öffnen"><img src="sindi_karte.jpg" width="1080" height="760" alt="Karte: Coiffeur Sindi an der Herisauerstrasse 22 in Gossau" loading="lazy"><span class="v-open">In Google Maps öffnen ↗</span></a>
@@ -870,6 +897,17 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   var wd=['So','Mo','Di','Mi','Do','Fr','Sa'];
   document.getElementById('t-date').textContent=wd[day]+' '+('0'+now.getDate()).slice(-2)+'.'+('0'+(now.getMonth()+1)).slice(-2)+'.'+now.getFullYear()+' · '+hc(min);
 
+
+  /* Tage: auswählen und Zeiten zeigen (Ticket + Besuchen Sie uns) */
+  (function(){var dayBtns=[].slice.call(document.querySelectorAll('.days .day')),rows=[].slice.call(document.querySelectorAll('.hours .hrow')),out=document.getElementById('day-out');
+    function sel(d){dayBtns.forEach(function(b){var on=+b.getAttribute('data-d')===d;b.classList.toggle('sel',on);b.setAttribute('aria-checked',on?'true':'false');b.tabIndex=on?0:-1;});
+      rows.forEach(function(r){var on=r.getAttribute('data-days').split(',').indexOf(String(d))>=0;r.classList.toggle('sel',on);r.setAttribute('aria-pressed',on?'true':'false');});
+      var t=H[d],txt=(d===day?'Heute, ':'')+names[d]+' · '+(t?hh(t[0])+'–'+hh(t[1])+' Uhr':'geschlossen');out.textContent=txt;out.classList.toggle('closed',!t);}
+    dayBtns.forEach(function(b,i){b.addEventListener('click',function(){sel(+b.getAttribute('data-d'));});
+      b.addEventListener('keydown',function(e){var k=e.key,j=-1;if(k==='ArrowRight'||k==='ArrowDown')j=(i+1)%7;if(k==='ArrowLeft'||k==='ArrowUp')j=(i+6)%7;
+        if(j>=0){e.preventDefault();dayBtns[j].focus();sel(+dayBtns[j].getAttribute('data-d'));}});});
+    rows.forEach(function(r){r.addEventListener('click',function(){var ds=r.getAttribute('data-days').split(',').map(Number);sel(ds.indexOf(day)>=0?day:ds[0]);});});
+    sel(day);})();
   /* Wartemarke drucken */
   var pr=document.getElementById('preise');
   var rm=false;try{rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(e){}
