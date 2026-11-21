@@ -676,6 +676,11 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 /* Gut zu wissen: 5 Kacheln ohne Loch */
 @media (min-width:900px){.gx-facts{grid-template-columns:repeat(6,minmax(0,1fr))}.gx-facts li{grid-column:span 2}.gx-facts li:nth-child(n+4){grid-column:span 3}}
 @media (min-width:561px) and (max-width:899px){.gx-facts li:nth-child(5){grid-column:1/-1}}
+/* Adresse im ersten Bildschirm */
+.hero .h-addr{display:flex;align-items:center;gap:8px;margin:-6px 0 14px;font-size:16px;color:rgba(242,244,246,.82)}
+.hero .h-addr svg{width:18px;height:18px;flex:none;color:#CFA95C}
+@media (max-width:599px){.hero .h-addr{font-size:15px;margin:-4px 0 12px}}
+@media (max-height:500px) and (orientation:landscape){.hero .h-addr{margin:0 0 6px;font-size:15px}}
 </style>
 </head>
 <body>
@@ -699,6 +704,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
     <div class="intro">
       <h1 class="h1logo" id="h1"><img class="lg-dunkel" src="sindi_logo_sindi_dunkel_800.png" width="705" height="800" alt="Coiffeur Sindi"></h1>
       <p class="lead">Coiffeur in Gossau</p>
+      <p class="h-addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Herisauerstrasse&nbsp;22 · 9200&nbsp;Gossau</span></p>
       <p class="status" id="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="st-main">Öffnungszeiten</span><span class="sub" id="st-sub">Di–Fr 09.00–19.00 · Sa 09.00–18.00</span></p>
       <p class="walk">Mit oder ohne Voranmeldung</p>
       <div class="actions">
