@@ -1,9 +1,12 @@
 <!doctype html>
-<html lang="de-CH" data-theme="dark">
+<html lang="de-CH" data-theme="dark" translate="no">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
+<meta name="google" content="notranslate">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#111A24">
 <title>Coiffeur Sindi – Gossau SG</title>
 <meta name="description" content="Coiffeur Sindi in Gossau SG: Preise, Öffnungszeiten, Telefon und Anfahrt. Mit oder ohne Voranmeldung.">
 <meta property="og:type" content="website">
@@ -72,15 +75,6 @@ a{color:inherit}
 .nav{display:flex;gap:4px;margin-right:8px}
 .nav a{font-size:15px;font-weight:500;color:var(--muted);text-decoration:none;padding:0 12px;min-height:44px;
   display:inline-flex;align-items:center;border-radius:22px}
-.nav a:hover{color:var(--ink)}
-.theme{font:inherit;font-size:14px;font-weight:600;min-height:44px;min-width:44px;padding:0 16px;border-radius:6px;
-  border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
-.theme b{font-weight:600}
-.theme .on{color:var(--ink)}
-.theme .sl{opacity:.5}
-.call-top{min-height:44px;min-width:44px;padding:0 18px;border-radius:6px;background:var(--btn-bg);color:var(--btn-fg);
-  text-decoration:none;font-weight:600;font-size:15px;display:inline-flex;align-items:center;justify-content:center;gap:8px}
-.call-top svg{width:18px;height:18px}
 
 /* ---------- Erster Bildschirm ---------- */
 .hero{position:relative;
@@ -103,9 +97,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 .status{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:600;margin:0 0 26px;padding:0}
 .dot{width:9px;height:9px;border-radius:2px;background:var(--off);position:relative;flex:none}
 .is-open .dot{background:var(--ok)}
-.is-open .dot::after{display:none;content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--ok);opacity:0;
-  animation:ping 2.4s ease-out infinite}
-@keyframes ping{0%{transform:scale(.5);opacity:.7}80%,100%{transform:scale(1.4);opacity:0}}
+
 .status .sub{font-weight:500;color:var(--muted)}
 .actions{display:flex;gap:12px;flex-wrap:wrap}
 .btn{min-height:52px;padding:0 24px;border-radius:6px;font-weight:700;font-size:16px;text-decoration:none;
@@ -114,12 +106,9 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 .btn-1{background:var(--btn-bg);color:var(--btn-fg);box-shadow:0 10px 22px -12px var(--shadow)}
 .btn-1 .num{font-weight:500;opacity:.8;font-variant-numeric:tabular-nums}
 .btn-2{background:var(--btn2-bg);color:var(--btn2-fg);box-shadow:inset 0 0 0 1.5px var(--btn2-line)}
-.btn:hover{transform:translateY(-1px)}
+
 .addr{flex:1 0 100%;font-size:15px;color:var(--muted);margin:2px 0 0}
 .actions{margin-bottom:30px}
-.quote{margin:0;padding:2px 0 2px 18px;border-left:2px solid var(--accent);max-width:31em}
-.quote p{margin:0 0 6px;font-size:16px;line-height:1.5}
-.quote footer{font-size:14px;color:var(--muted)}
 
 /* ---------- Wartemarke ---------- */
 .printer{position:relative;width:420px;max-width:100%;justify-self:center}
@@ -137,7 +126,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   filter:drop-shadow(0 22px 22px var(--shadow-2)) drop-shadow(0 3px 4px var(--shadow-2));
   transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
 .printed .ticket,.static .ticket{transform:rotate(-1.6deg)}
-.printed .ticket:hover{transform:rotate(-.8deg) translateY(-3px)}
+
 .t-main{background:var(--paper);color:var(--paper-ink);padding:26px 24px 22px;
   font-family:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;font-size:13px;line-height:1.75;
   -webkit-mask:radial-gradient(circle 9px at 0 100%,#0000 96%,#000) left/51% 100% no-repeat,radial-gradient(circle 9px at 100% 100%,#0000 96%,#000) right/51% 100% no-repeat;
@@ -172,7 +161,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   background:linear-gradient(var(--paper),var(--paper)) top/100% calc(100% - 8px) no-repeat}
 .stub::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;
   background:conic-gradient(from -45deg at 50% 100%,var(--paper) 90deg,#0000 0) 0 0/16px 8px repeat-x}
-.ticket:hover .stub{transform:rotate(3.5deg) translate(4px,5px)}
+
 .stub .nr{font-size:11px;color:var(--paper-muted);line-height:1.2;letter-spacing:.1em;text-transform:uppercase}
 .stub .nr b{display:block;font-size:30px;letter-spacing:.02em;color:var(--paper-ink);font-weight:600;line-height:1.05}
 .stub .what{text-align:right;font-size:12px;color:var(--paper-muted);line-height:1.45}
@@ -190,8 +179,6 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   56%{transform:translateY(-32%)} 62%{transform:translateY(-30%)}
   80%{transform:translateY(-7%)}
   100%{transform:translateY(0)}}
-.printing .ticket{animation:shiver .09s linear infinite}
-@keyframes shiver{0%,100%{margin-left:auto}50%{transform:translateX(.4px)}}
 
 /* ---------- Nächster Block: Schnitte ---------- */
 .cuts{padding:72px 0 64px}
@@ -206,7 +193,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 .ph:nth-child(1) img{object-position:40% 50%}
 .ph:nth-child(3) img{object-position:55% 40%}
 .ph:nth-child(5) img{object-position:50% 35%}
-.ph.in img,.ph:hover img{filter:grayscale(0) contrast(1);transform:scale(1)}
+.ph.in img{filter:grayscale(0) contrast(1);transform:scale(1)}
 .tag{position:absolute;left:10px;right:10px;bottom:0;background:var(--tag-bg);color:var(--tag-fg);
   font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:12px;line-height:1.35;
   padding:9px 11px 13px;display:flex;justify-content:space-between;align-items:flex-end;gap:8px;
@@ -227,7 +214,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   font-size:11.5px;font-weight:600;padding:5px 10px;border-radius:7px;letter-spacing:.01em}
 
 /* ---------- Laptop mit wenig Höhe ---------- */
-@media (min-width:900px) and (max-height:820px){
+@media (min-width:900px) and (max-height:900px){
   .t-main{line-height:1.58;padding-top:20px;padding-bottom:16px}
   .t-head{margin-bottom:8px}
   .rule{margin:7px 0}
@@ -244,8 +231,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   .t-crown{display:none}
   .t-name{margin-top:0}
   .t-meta{margin-top:6px}
-  .hours{line-height:1.45}
-}
+  .hours{line-height:1.45}}
 
 /* ---------- Tablet / Telefon ---------- */
 @media (max-width:899px){
@@ -253,14 +239,10 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   .intro{max-width:none}
   .printer{width:min(420px,100%)}
   .row{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .nav{display:none}
-}
+  .nav{display:none}}
 @media (max-width:599px){
   body{font-size:16px}
   .top .wrap{height:60px}
-  .call-top{padding:0;width:44px}
-  .call-top .t{display:none}
-  .theme{padding:0 13px;font-size:13px}
   .idrow{gap:16px;margin-bottom:22px}
   .logo{width:96px;border-radius:13px}
   h1{font-size:42px}
@@ -270,8 +252,6 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   .btn-1{grid-column:1/-1}
   .addr{font-size:14px;line-height:1.35;margin:0}
   .addr span{display:block}
-  .quote{display:none}
-  .q-mobile{display:block !important}
   .ticket{width:calc(100% - 26px)}
   .t-main{padding:22px 15px 18px;font-size:12px;letter-spacing:-.01em}
   .plist li{gap:4px}
@@ -280,24 +260,22 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   .row{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
   .cuts{padding:56px 0 48px}
   .tag{font-size:11.5px;left:8px;right:8px}
-  .draft{font-size:10.5px;padding:4px 8px;left:8px;bottom:8px}
-}
-.q-mobile{display:none;margin:36px 0 0}
+  .draft{font-size:10.5px;padding:4px 8px;left:8px;bottom:8px}}
 
 /* ---------- Interaktiv: Preiszeile und Fotos ---------- */
 .plist li{cursor:pointer;margin:0 -7px;padding:0 7px;border-radius:4px;transition:background-color .2s ease,color .2s ease}
 .plist .n{background:linear-gradient(var(--mark),var(--mark)) 0 100%/0 2px no-repeat;transition:background-size .3s ease}
-.plist li:hover,.plist li.on,.plist li:focus-visible{background-color:var(--mark-soft);color:var(--mark)}
-.plist li:hover .n,.plist li.on .n,.plist li:focus-visible .n{background-size:100% 2px}
-.plist li:hover .d,.plist li.on .d{border-bottom-color:var(--mark)}
+.plist li.on,.plist li:focus-visible{background-color:var(--mark-soft);color:var(--mark)}
+.plist li.on .n,.plist li:focus-visible .n{background-size:100% 2px}
+.plist li.on .d{border-bottom-color:var(--mark)}
 .plist li:focus-visible{outline:none}
 .stub b{transition:color .2s ease}
 .stub.picked b{color:var(--mark)}
-.ph{cursor:pointer}
+
 .ph .img{transition:box-shadow .3s ease,transform .3s ease}
-.ph:hover .img,.ph.on .img,.ph:focus-visible .img{box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--frame);transform:translateY(-3px)}
-.ph:hover img,.ph.on img{filter:grayscale(0) contrast(1);transform:scale(1)}
-.ph:hover .tag b,.ph.on .tag b{color:var(--mark)}
+.ph.on .img,.ph:focus-visible .img{box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--frame);transform:translateY(-3px)}
+.ph.on img{filter:grayscale(0) contrast(1);transform:scale(1)}
+.ph.on .tag b{color:var(--mark)}
 .ph:focus-visible{outline:none}
 
 /* ---------- Wartemarke grösser auf breiten Bildschirmen ---------- */
@@ -311,21 +289,19 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   .t-foot .big{font-size:1em}
   .bc-num{font-size:.8em}
   .barcode{height:2.4em}
-  .stub{padding-left:1.9em;padding-right:1.9em}
-}
+  .stub{padding-left:1.9em;padding-right:1.9em}}
 
 /* ---------- Erster Bildschirm mit Foto ---------- */
 .top{position:absolute;left:0;right:0;top:0;z-index:6;color:#F2F4F6}
-.top .nav a,.top .theme{color:rgba(242,244,246,.78)}
-.top .nav a:hover,.top .theme .on{color:#fff}
-.top .theme{border-color:rgba(242,244,246,.35)}
+.top .nav a{color:rgba(242,244,246,.78)}
+
 .hero{background:#0F151C;color:#F2F4F6;isolation:isolate;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:-2;background:transparent url(sindi_hero_ki.jpg) 70% 50%/cover no-repeat}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;
   background:linear-gradient(90deg,rgba(9,13,18,.86) 0%,rgba(9,13,18,.62) 38%,rgba(9,13,18,.12) 70%,rgba(9,13,18,.30) 100%),
              linear-gradient(0deg,rgba(9,13,18,.55),transparent 30%)}
 .hero .wrap{padding-top:96px;padding-bottom:56px;min-height:100vh;min-height:100svh}
-@media (min-width:900px) and (max-height:820px){.hero .wrap{padding-top:84px;padding-bottom:28px}}
+@media (min-width:900px) and (max-height:900px){.hero .wrap{padding-top:84px;padding-bottom:28px}}
 .h1logo{margin:0 0 26px;line-height:0}
 .h1logo img{width:clamp(220px,22vw,330px);height:auto}
 .hero .lead{color:rgba(242,244,246,.82)}
@@ -334,10 +310,8 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 .hero .status .sub{color:rgba(242,244,246,.72)}
 .hero .btn-1{background:#F2F4F6;color:#10161D}
 .route{color:#F2F4F6;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:52px;padding:0 6px;border-bottom:0}
-.route:hover{text-decoration:underline;text-underline-offset:5px}
+
 .actions{align-items:center}
-.ki{position:absolute;right:14px;bottom:12px;z-index:3;font-size:11.5px;font-weight:600;letter-spacing:.02em;color:rgba(242,244,246,.86);
-  background:rgba(9,13,18,.55);padding:4px 9px;border-radius:4px}
 
 /* ---------- Was Kunden sagen ---------- */
 .voices{padding:72px 0 76px;border-top:1px solid var(--line)}
@@ -356,8 +330,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   .actions{display:flex;flex-wrap:wrap}.btn-1{width:100%;justify-content:center}}
 
 @media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
-}
+  *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
 
 /* ---------- Blöcke aus dem Google-Profil ---------- */
 .gx{--gx-ink:var(--ink);--gx-muted:var(--muted);--gx-line:var(--line);--gx-card:var(--paper);--gx-card-ink:var(--paper-ink);--gx-max:1240px;--gx-pad:clamp(16px,4vw,48px);--gx-r:4px;padding:64px 0;border-top:1px solid var(--gx-line);color:var(--gx-ink)}
@@ -377,7 +350,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 .gx-map-head h2{margin:0}
 .gx-map-head p{margin:0;color:var(--gx-muted)}
 .gx-map-head a{color:var(--gx-ink);font-weight:700;text-decoration:none}
-.gx-map-head a:hover{text-decoration:underline;text-underline-offset:4px}
+
 .gx-frame{border-radius:var(--gx-r);overflow:hidden;border:1px solid var(--gx-line);height:clamp(280px,40vh,420px);background:var(--gx-card)}
 .gx-frame iframe{width:100%;height:100%;border:0;display:block}
 :root[data-theme="dark"] .gx-frame iframe{filter:invert(.9) hue-rotate(180deg) saturate(.7)}
@@ -399,7 +372,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 .hero .btn{min-height:62px;padding:0 30px;font-size:clamp(17px,1.3vw,19px);border-radius:6px}
 .hero .btn svg{width:20px;height:20px}
 .hero .btn.route{background:transparent;color:#F2F4F6;box-shadow:inset 0 0 0 1.5px rgba(242,244,246,.75)}
-.hero .btn.route:hover{background:rgba(242,244,246,.1);text-decoration:none}
+
 .hero::before{background:linear-gradient(90deg,rgba(9,13,18,.9) 0%,rgba(9,13,18,.72) 34%,rgba(9,13,18,.25) 62%,rgba(9,13,18,.35) 100%),linear-gradient(0deg,rgba(9,13,18,.55),transparent 30%)}
 @media (min-width:900px) and (max-height:760px){.h1logo img{height:min(38vh,340px)}.hero .walk{margin-bottom:22px}.hero .btn{min-height:56px}}
 @media (max-width:899px){.h1logo img{height:min(40vh,340px)}}
@@ -420,16 +393,15 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 
 /* ---------- Erster Bildschirm hell/dunkel, Foto nur als zarte Textur ---------- */
 .top{color:var(--ink)}
-.top .nav a,.top .theme{color:var(--muted)}
-.top .nav a:hover,.top .theme .on{color:var(--ink)}
-.top .theme{border-color:var(--line)}
+.top .nav a{color:var(--muted)}
+
 .hero{background:var(--bg);color:var(--ink)}
 .hero-bg{background-image:url(sindi_hero_ki.jpg);background-position:70% 50%;opacity:.13;filter:grayscale(1) contrast(.85) blur(1px)}
 :root[data-theme="dark"] .hero-bg{opacity:.16}
 .hero::before{background:linear-gradient(90deg,var(--bg) 0%,color-mix(in srgb,var(--bg) 70%,transparent) 38%,transparent 70%),linear-gradient(0deg,var(--bg),transparent 22%)}
 .h1logo img{filter:none}
 .lg-dunkel{display:none}
-:root[data-theme="dark"] .lg-hell{display:none}
+
 :root[data-theme="dark"] .lg-dunkel{display:inline-block}
 .hero .lead{color:var(--ink)}
 .hero .status{color:var(--ink)}
@@ -437,7 +409,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 .hero .walk{color:var(--muted)}
 .hero .btn-1{background:var(--btn-bg);color:var(--btn-fg)}
 .hero .btn.route{color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
-.hero .btn.route:hover{background:var(--accent-soft)}
+
 @media (max-width:899px){.hero-bg{background-image:url(sindi_hero_ki_phone_900.jpg);background-position:50% 50%}}
 
 /* ---------- Foto nur links, gespiegelt, zart ---------- */
@@ -449,8 +421,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 @media (max-width:899px){
   .hero-bg{inset:0 0 auto 0;width:100%;height:78%;
     -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 45%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 45%,transparent 100%)}
-  .hero-bg::before{background-image:url(sindi_hero_ki_phone_900.jpg);background-position:50% 50%}
-}
+  .hero-bg::before{background-image:url(sindi_hero_ki_phone_900.jpg);background-position:50% 50%}}
 
 /* ---------- Erster Bildschirm: dunkles Blaugrau (Wunsch Julia), Foto sichtbarer ---------- */
 .hero{background:#111A24;color:#F2F4F6}
@@ -458,17 +429,14 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 .hero-bg::before{filter:saturate(.9) contrast(.95)}
 .hero::before{background:linear-gradient(0deg,#111A24,transparent 20%)}
 .top{color:#F2F4F6}
-.top .nav a,.top .theme{color:rgba(242,244,246,.75)}
-.top .nav a:hover,.top .theme .on{color:#fff}
-.top .theme{border-color:rgba(242,244,246,.3)}
-.hero .lg-hell{display:none!important}
+.top .nav a{color:rgba(242,244,246,.75)}
+
 .hero .lg-dunkel{display:inline-block!important}
 .hero .lead{color:#fff}
 .hero .status{color:#F2F4F6}
 .hero .status .sub,.hero .walk{color:rgba(242,244,246,.75)}
 .hero .btn-1{background:#F2F4F6;color:#111A24}
 .hero .btn.route{color:#F2F4F6;box-shadow:inset 0 0 0 1.5px rgba(242,244,246,.75)}
-.hero .btn.route:hover{background:rgba(242,244,246,.08)}
 
 /* ================= Liste Julia 18.11 ================= */
 :root{--gold:#B08A3E;--gold-soft:rgba(176,138,62,.14);--mark:#B08A3E;--mark-soft:rgba(176,138,62,.16);--frame:#B08A3E;--accent:#B08A3E;--accent-soft:rgba(176,138,62,.12)}
@@ -481,18 +449,18 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 /* 3) Licht vor «Offen» hell */
 .hero .status.is-open .dot{background:#6FCB8E;box-shadow:0 0 10px rgba(111,203,142,.7)}
 /* 4) kein Blau: Text schwarz, Hervorhebung gold */
-.plist li:hover,.plist li.on,.plist li:focus-visible{color:var(--paper-ink);background-color:rgba(176,138,62,.16)}
+.plist li.on,.plist li:focus-visible{color:var(--paper-ink);background-color:rgba(176,138,62,.16)}
 .plist .n{background-image:linear-gradient(#B08A3E,#B08A3E)}
-.plist li:hover .d,.plist li.on .d{border-bottom-color:#B08A3E}
+.plist li.on .d{border-bottom-color:#B08A3E}
 .stub.picked b{color:var(--paper-ink)}
-.ph:hover .tag b,.ph.on .tag b{color:var(--tag-fg)}
-.ph:hover .img,.ph.on .img,.ph:focus-visible .img{box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--gold)}
+.ph.on .tag b{color:var(--tag-fg)}
+.ph.on .img,.ph:focus-visible .img{box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--gold)}
 /* 5) Bildschilder tiefer, eine Zeile, Preis ganz */
 .ph{padding-bottom:0}
 .tag{position:relative;left:auto;right:auto;bottom:auto;margin:-14px 0 0;padding:9px 8px 12px;gap:6px;font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:12px;letter-spacing:-.01em;font-weight:600;align-items:center;white-space:nowrap}
 .tag span{min-width:0}
 .tag b{font-weight:800}
-.ph[data-k="5"] .tag{white-space:normal}
+
 @media (max-width:599px){.tag{font-size:12px;padding:8px 8px 11px}}
 /* 6) Was Kunden sagen */
 .voices{background:radial-gradient(60% 80% at 85% 0%,var(--gold-soft),transparent 70%),var(--bg-glow);border-top:0}
@@ -505,7 +473,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 .topics{margin:0 0 28px;color:var(--muted);font-size:15px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .topics span{border:1px solid var(--gold);color:var(--ink);border-radius:999px;padding:3px 12px;font-weight:600}
 .vlist blockquote{border-top:3px solid var(--gold);transition:transform .35s ease,box-shadow .35s ease}
-.vlist li:hover blockquote{transform:translateY(-8px);box-shadow:0 0 0 1.5px var(--gold),0 22px 40px -18px rgba(176,138,62,.55)}
+
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
 .rv.in{opacity:1;transform:none}
 /* 7) Ihre Coiffeure */
@@ -516,14 +484,14 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   background:linear-gradient(140deg,#E2C27E,#B08A3E);color:#1E2328;font-size:30px;font-weight:800;box-shadow:0 10px 22px -10px rgba(176,138,62,.8)}
 .gx-people .gx-name{font-family:inherit;font-size:28px;font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
 .gx-people li{transition:transform .35s ease,box-shadow .35s ease}
-.gx-people li:hover{transform:translateY(-6px);box-shadow:0 22px 40px -20px rgba(176,138,62,.6)}
+
 .gx-people.rv,.gx-people li.rv{}
 /* 8) Gut zu wissen: lebendige Kacheln */
 .gx-info{background:var(--bg)}
 .gx-facts{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .gx-facts li{border:1px solid var(--line);border-radius:8px;padding:20px 20px;background:var(--bg-glow);font-size:17px;font-weight:700;gap:16px;
   transition:transform .3s ease,border-color .3s ease}
-.gx-facts li:hover{transform:translateY(-4px);border-color:var(--gold)}
+
 .gx-facts svg{width:46px;height:46px;padding:11px;border-radius:50%;background:var(--gold-soft);color:var(--gold);box-sizing:border-box}
 @media (max-width:899px){.gx-facts{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.gx-facts{grid-template-columns:1fr}}
@@ -531,14 +499,13 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 .visit .wrap.visit-grid{grid-template-columns:minmax(160px,220px) minmax(240px,1fr) minmax(0,1.6fr);align-items:center;gap:44px}
 .v-logo img{width:100%;height:auto}
 .v-logo .lg-dunkel{display:none}
-:root[data-theme="dark"] .v-logo .lg-hell{display:none}
+
 :root[data-theme="dark"] .v-logo .lg-dunkel{display:block}
 .v-addr,.v-code{display:flex;gap:12px;align-items:flex-start}
 .v-addr svg,.v-code svg{width:24px;height:24px;flex:none;color:var(--gold);margin-top:3px}
 .v-route{background:var(--gold);color:#1E2328}
 .v-map{min-height:0;height:380px}
 @media (max-width:899px){.visit .wrap.visit-grid{grid-template-columns:1fr;gap:26px}.v-logo{max-width:180px}}
-.hero .btn.route:hover{background:rgba(242,244,246,.08)}
 
 /* Bewertung als Abreisstalon (statt leuchtendem Rahmen) */
 .score-card{position:relative;gap:16px;padding:16px 26px 24px 30px;border:0;border-radius:0;box-shadow:0 14px 26px -14px rgba(0,0,0,.45);
@@ -552,9 +519,9 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 
 .v-mapimg{position:relative;display:block;text-decoration:none}
 .v-mapimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
-.v-mapimg:hover img{transform:scale(1.03)}
+
 .v-open{position:absolute;left:12px;top:12px;background:rgba(17,26,36,.86);color:#F2F4F6;font-weight:700;font-size:14px;padding:8px 12px;border-radius:6px}
-.v-mapimg:hover .v-open{background:#CFA95C;color:#111A24}
+
 :root[data-theme="dark"] .v-mapimg img{filter:none}
 .tag{justify-content:center;text-align:center;font-size:13px}
 .ph[data-s="5"] .tag{white-space:normal}
@@ -568,8 +535,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   .t-small,.t-meta,.hours,.t-title{font-size:13px}
   .plist li{gap:3px}
   .vlist footer{font-size:13px}
-  .tag{font-size:13px}
-}
+  .tag{font-size:13px}}
 
 /* Fusszeile: mittig, tiefer, zwei Zeilen mit Luft */
 .foot{padding:56px 0 64px;font-size:15px}
@@ -594,14 +560,14 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 .legal{display:flex;justify-content:center;gap:28px;margin-top:8px}
 .legal button{font:inherit;font-size:13px;background:none;border:0;padding:4px 2px;color:var(--muted);cursor:pointer;
   text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px;transition:color .2s,text-decoration-color .2s}
-.legal button:hover,.legal button:focus-visible{color:var(--gold);text-decoration-color:var(--gold)}
+.legal button:focus-visible{color:var(--gold);text-decoration-color:var(--gold)}
 .dlg{border:0;border-radius:8px;padding:30px 34px 28px;max-width:min(440px,calc(100vw - 32px));width:100%;background:var(--paper);color:var(--paper-ink);
   box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
 .dlg::backdrop{background:rgba(9,13,18,.6)}
 .dlg h2{margin:0 0 10px;font-size:22px;font-weight:800;letter-spacing:-.02em}
 .dlg p{margin:0;color:var(--paper-muted)}
 .dlg-x{position:absolute;right:10px;top:8px;width:40px;height:40px;border:0;background:none;font-size:26px;line-height:1;color:var(--paper-ink);cursor:pointer;border-radius:6px}
-.dlg-x:hover{background:rgba(176,138,62,.16)}
+
 @media (max-width:599px){.visit{padding-bottom:20px}.legal{gap:24px}}
 .foot .wrap span:not(.sep){font-weight:600;color:var(--ink)}
 
@@ -620,13 +586,96 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 .v-time span{color:var(--muted)}
 .v-tel svg,.v-time svg{width:24px;height:24px;flex:none;color:var(--gold);margin-top:3px}
 .v-tel a{color:inherit;font-weight:700;text-decoration:none;border-bottom:1px solid var(--gold)}
-.v-tel a:hover{color:var(--gold)}
+
 .topics .tp-l{font-weight:inherit}
 @media (max-width:599px){
   .topics .tp-l{flex-basis:100%}
   .v-map{height:auto;aspect-ratio:1080/760}
-  .v-mapimg img{object-fit:contain}
+  .v-mapimg img{object-fit:contain}}
+
+/* Hover nur mit Maus/Trackpad */
+@media (hover:hover) and (pointer:fine){
+.nav a:hover{color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+.printed .ticket:hover{transform:rotate(-.8deg) translateY(-3px)}
+.ticket:hover .stub{transform:rotate(3.5deg) translate(4px,5px)}
+.ph:hover img{filter:grayscale(0) contrast(1);transform:scale(1)}
+.plist li:hover{background-color:var(--mark-soft);color:var(--mark)}
+.plist li:hover .n{background-size:100% 2px}
+.plist li:hover .d{border-bottom-color:var(--mark)}
+.ph:hover .img{box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--frame);transform:translateY(-3px)}
+.ph:hover img{filter:grayscale(0) contrast(1);transform:scale(1)}
+.ph:hover .tag b{color:var(--mark)}
+.top .nav a:hover{color:#fff}
+.route:hover{text-decoration:underline;text-underline-offset:5px}
+.gx-map-head a:hover{text-decoration:underline;text-underline-offset:4px}
+.hero .btn.route:hover{background:rgba(242,244,246,.1);text-decoration:none}
+.top .nav a:hover{color:var(--ink)}
+.hero .btn.route:hover{background:var(--accent-soft)}
+.top .nav a:hover{color:#fff}
+.hero .btn.route:hover{background:rgba(242,244,246,.08)}
+.plist li:hover{color:var(--paper-ink);background-color:rgba(176,138,62,.16)}
+.plist li:hover .d{border-bottom-color:#B08A3E}
+.ph:hover .tag b{color:var(--tag-fg)}
+.ph:hover .img{box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--gold)}
+.vlist li:hover blockquote{transform:translateY(-8px);box-shadow:0 0 0 1.5px var(--gold),0 22px 40px -18px rgba(176,138,62,.55)}
+.gx-people li:hover{transform:translateY(-6px);box-shadow:0 22px 40px -20px rgba(176,138,62,.6)}
+.gx-facts li:hover{transform:translateY(-4px);border-color:var(--gold)}
+.hero .btn.route:hover{background:rgba(242,244,246,.08)}
+.v-mapimg:hover img{transform:scale(1.03)}
+.v-mapimg:hover .v-open{background:#CFA95C;color:#111A24}
+.legal button:hover{color:var(--gold);text-decoration-color:var(--gold)}
+.dlg-x:hover{background:rgba(176,138,62,.16)}
+.v-tel a:hover{color:var(--gold)}
 }
+
+/* Ревью 21.11 */
+:root{color-scheme:dark}
+/* Druck: ruhig, ~2,6 s, Neigung im selben Zug */
+.printing .roll{animation:printSmooth 2.6s cubic-bezier(.25,.6,.3,1) both}
+.printing .ticket{animation:tiltIn 2.6s cubic-bezier(.25,.6,.3,1) both}
+@keyframes tiltIn{from{transform:rotate(0)}to{transform:rotate(-1.6deg)}}
+.ticket{transition:none}
+.printed .ticket{transition:transform .35s ease}
+/* Kein Hover, solange etwas animiert */
+.js .printer:not(.printed):not(.static) .ticket{pointer-events:none}
+.ph:not(.done){pointer-events:none}
+.rv:not(.done){pointer-events:none}
+.gx-facts li.rv:not(.done),.gx-people li.rv:not(.done){transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+/* Anruf-Knopf in der Kopfzeile (Telefon/Tablet) */
+.tel-top{display:none}
+@media (max-width:899px){
+  .top .wrap{display:flex;align-items:center;justify-content:space-between}
+  .tel-top{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;
+    border:1.5px solid rgba(207,169,92,.7);color:#CFA95C;background:rgba(17,26,36,.55)}
+  .tel-top svg{width:20px;height:20px}
+}
+/* Telefon quer */
+@media (max-height:500px) and (orientation:landscape){
+  .hero .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;align-content:start;min-height:0;padding-top:62px;padding-bottom:24px;gap:28px}
+  .hero .intro{align-self:start}
+  .h1logo img{height:26vh!important;width:auto!important}
+  .hero .h1logo{margin-bottom:6px}
+  .hero .lead{margin-bottom:6px;font-size:20px}
+  .hero .status{margin-bottom:2px;font-size:16px}
+  .hero .walk{margin-bottom:10px}
+  .hero .actions{gap:10px}
+  .hero .btn{min-height:46px}
+  .draft{left:auto;right:8px}
+}
+/* Telefon: Preise im Bon groesser, Status sauber umbrechen */
+@media (max-width:599px){
+  .t-main{font-size:15px;letter-spacing:-.02em}
+  .plist li{line-height:1.6}
+  .hours,.t-small,.t-meta{font-size:13px}
+  .hero .status{flex-wrap:wrap;row-gap:2px}
+  .hero .status .sub{white-space:nowrap}
+}
+.hero .status.is-closed .sub::before{content:"· "}
+@media (max-width:359px){.hero .status.is-closed .sub::before{content:none}}
+/* Gut zu wissen: 5 Kacheln ohne Loch */
+@media (min-width:900px){.gx-facts{grid-template-columns:repeat(6,minmax(0,1fr))}.gx-facts li{grid-column:span 2}.gx-facts li:nth-child(n+4){grid-column:span 3}}
+@media (min-width:561px) and (max-width:899px){.gx-facts li:nth-child(5){grid-column:1/-1}}
 </style>
 </head>
 <body>
@@ -636,10 +685,10 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   <div class="wrap">
     <a class="brand" href="#">Coiffeur Sindi</a>
     <nav class="nav" aria-label="Seitenbereiche">
-      <a href="#preise">Preisliste</a>
-      <a href="#schnitte">Schnitte</a>
+      <a href="#schnitte">Unsere Arbeiten</a>
       <a href="#besuch">Besuchen Sie uns</a>
     </nav>
+    <a class="tel-top" href="tel:+41713850303" aria-label="Anrufen: 071 385 03 03"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
   </div>
 </header>
 
@@ -650,7 +699,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
     <div class="intro">
       <h1 class="h1logo" id="h1"><img class="lg-dunkel" src="sindi_logo_sindi_dunkel_800.png" width="705" height="800" alt="Coiffeur Sindi"></h1>
       <p class="lead">Coiffeur in Gossau</p>
-      <p class="status" id="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="st-main">Öffnungszeiten</span><span class="sub" id="st-sub">Di–Fr 09–19 · Sa 09–18</span></p>
+      <p class="status" id="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="st-main">Öffnungszeiten</span><span class="sub" id="st-sub">Di–Fr 09.00–19.00 · Sa 09.00–18.00</span></p>
       <p class="walk">Mit oder ohne Voranmeldung</p>
       <div class="actions">
         <a class="btn btn-1" href="tel:+41713850303">
@@ -677,7 +726,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
               <h2 class="t-title"><span>Preisliste</span><span>CHF</span></h2>
               <ul class="plist">
                 <li data-k="0" tabindex="0"><span class="n">Haarschnitt</span><span class="d"></span><span class="p">28.–</span></li>
-                <li data-k="1" tabindex="0"><span class="n">Knaben 13–15 Jahre</span><span class="d"></span><span class="p">25.–</span></li>
+                <li data-k="1" tabindex="0"><span class="n">Knaben bis 15 Jahre</span><span class="d"></span><span class="p">25.–</span></li>
                 <li data-k="2" tabindex="0"><span class="n">Bart</span><span class="d"></span><span class="p">20.–</span></li>
                 <li data-k="3" tabindex="0"><span class="n">Augenbrauen zupfen</span><span class="d"></span><span class="p">15.–</span></li>
                 <li data-k="4" tabindex="0"><span class="n">Kinder bis 12 Jahre</span><span class="d"></span><span class="p">20.–</span></li>
@@ -691,7 +740,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
               <hr class="rule">
               <div class="t-foot">
                 <p class="big">Wir freuen uns auf Sie</p>
-                <div class="hours"><span>Di–Fr</span><span>09:00–19:00</span><span>Sa</span><span>09:00–18:00</span><span>So, Mo</span><span>geschlossen</span></div>
+                <div class="hours"><span>Di–Fr</span><span>09.00–19.00</span><span>Sa</span><span>09.00–18.00</span><span>So, Mo</span><span>geschlossen</span></div>
                 <svg class="barcode" viewBox="0 0 238 40" preserveAspectRatio="none" fill="currentColor" aria-hidden="true"><rect x="0" width="1" height="40"/><rect x="2" width="2" height="40"/><rect x="5" width="1" height="40"/><rect x="9" width="1" height="40"/><rect x="12" width="2" height="40"/><rect x="15" width="2" height="40"/><rect x="18" width="1" height="40"/><rect x="20" width="2" height="40"/><rect x="24" width="1" height="40"/><rect x="26" width="1" height="40"/><rect x="30" width="2" height="40"/><rect x="33" width="4" height="40"/><rect x="40" width="1" height="40"/><rect x="42" width="3" height="40"/><rect x="48" width="1" height="40"/><rect x="52" width="2" height="40"/><rect x="56" width="1" height="40"/><rect x="58" width="1" height="40"/><rect x="62" width="4" height="40"/><rect x="67" width="1" height="40"/><rect x="70" width="1" height="40"/><rect x="74" width="1" height="40"/><rect x="78" width="1" height="40"/><rect x="82" width="4" height="40"/><rect x="87" width="1" height="40"/><rect x="91" width="2" height="40"/><rect x="94" width="1" height="40"/><rect x="96" width="2" height="40"/><rect x="99" width="2" height="40"/><rect x="102" width="2" height="40"/><rect x="105" width="2" height="40"/><rect x="110" width="2" height="40"/><rect x="114" width="2" height="40"/><rect x="119" width="2" height="40"/><rect x="123" width="1" height="40"/><rect x="125" width="4" height="40"/><rect x="130" width="3" height="40"/><rect x="134" width="1" height="40"/><rect x="138" width="1" height="40"/><rect x="142" width="2" height="40"/><rect x="146" width="3" height="40"/><rect x="151" width="1" height="40"/><rect x="155" width="1" height="40"/><rect x="157" width="2" height="40"/><rect x="161" width="1" height="40"/><rect x="164" width="1" height="40"/><rect x="167" width="2" height="40"/><rect x="170" width="3" height="40"/><rect x="174" width="4" height="40"/><rect x="181" width="2" height="40"/><rect x="185" width="1" height="40"/><rect x="188" width="2" height="40"/><rect x="192" width="2" height="40"/><rect x="196" width="1" height="40"/><rect x="198" width="1" height="40"/><rect x="201" width="3" height="40"/><rect x="205" width="1" height="40"/><rect x="208" width="3" height="40"/><rect x="214" width="3" height="40"/><rect x="219" width="1" height="40"/><rect x="222" width="3" height="40"/><rect x="227" width="1" height="40"/><rect x="230" width="1" height="40"/><rect x="232" width="2" height="40"/><rect x="235" width="2" height="40"/></svg>
               </div>
             </div>
@@ -710,15 +759,15 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 <section class="cuts" id="schnitte" aria-labelledby="h-cuts">
   <div class="wrap">
     <div class="cuts-head">
-      <h2 id="h-cuts">Haare, Bart, Augenbrauen</h2>
+      <h2 id="h-cuts">Unsere Arbeiten</h2>
     </div>
     <ul class="row">
-      <li class="ph" data-s="0" tabindex="0"><div class="img"><img src="sindi_s2.jpg" alt="Kurzer Fade, im Profil" loading="lazy"></div><span class="tag"><span>Haarschnitt</span></span></li>
-      <li class="ph" data-s="5" tabindex="0"><div class="img"><img src="sindi_s3.jpg" alt="Haarschnitt mit Bart und klaren Augenbrauen" loading="lazy"></div><span class="tag"><span>Haare + Bart + Augenbrauen</span></span></li>
-      <li class="ph" data-s="3" tabindex="0"><div class="img"><img src="sindi_s1.jpg" alt="Augenbrauen zupfen mit Faden" loading="lazy"></div><span class="tag"><span>Augenbrauen zupfen</span></span></li>
-      <li class="ph" data-s="6" tabindex="0"><div class="img"><img src="sindi_s5.jpg" alt="Frisur mit gepflegtem Bart, im Profil" loading="lazy"></div><span class="tag"><span>Haare + Bart</span></span></li>
-      <li class="ph" data-s="1" tabindex="0"><div class="img"><img src="sindi_s4.jpg" alt="Knabe mit frischem Haarschnitt" loading="lazy"></div><span class="tag"><span>Knaben 13–15 Jahre</span></span></li>
-      <li class="ph" data-s="2" tabindex="0"><div class="img"><img src="sindi_s6.jpg" alt="Langes Haar und voller Bart, Schwarzweiss" loading="lazy"></div><span class="tag"><span>Bart</span></span></li>
+      <li class="ph" data-s="0"><div class="img"><img src="sindi_s2.jpg" alt="Kurzer Fade, im Profil" loading="lazy"></div><span class="tag"><span>Haarschnitt</span></span></li>
+      <li class="ph" data-s="5"><div class="img"><img src="sindi_s3.jpg" alt="Haarschnitt mit Bart und klaren Augenbrauen" loading="lazy"></div><span class="tag"><span>Haare + Bart + Augenbrauen</span></span></li>
+      <li class="ph" data-s="3"><div class="img"><img src="sindi_s1.jpg" alt="Augenbrauen zupfen mit Faden" loading="lazy"></div><span class="tag"><span>Augenbrauen zupfen</span></span></li>
+      <li class="ph" data-s="6"><div class="img"><img src="sindi_s5.jpg" alt="Frisur mit gepflegtem Bart, im Profil" loading="lazy"></div><span class="tag"><span>Haare + Bart</span></span></li>
+      <li class="ph" data-s="1"><div class="img"><img src="sindi_s4.jpg" alt="Knabe mit frischem Haarschnitt" loading="lazy"></div><span class="tag"><span>Knaben bis 15 Jahre</span></span></li>
+      <li class="ph" data-s="2"><div class="img"><img src="sindi_s6.jpg" alt="Langes Haar und voller Bart, Schwarzweiss" loading="lazy"></div><span class="tag"><span>Bart</span></span></li>
     </ul>
   </div>
 </section>
@@ -732,7 +781,7 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
         <div><span class="sc-of">von 5 auf Google</span><span class="sc-line"><span class="nw">231 Bewertungen</span> · <span class="nw">220 davon mit 5 Sternen</span></span></div>
       </div>
     </div>
-    <p class="topics"><b class="tp-l">Oft genannt:</b> <span>freundlich</span><span>seit Jahren</span><span>Preis</span></p>
+    <p class="topics"><b class="tp-l">Häufig gelobt:</b> <span>Freundlichkeit</span><span>Stammkunden seit Jahren</span><span>faire Preise</span></p>
     <ul class="vlist">
       <li><blockquote><p>«Sehr netter Coiffeur, habe rasch einen Termin bekommen. Freundlich, professionell und faire Preise – absolut empfehlenswert!»</p><footer>Zorana</footer></blockquote></li>
       <li><blockquote><p>«Bester Coiffeur weit herum! […] weiss genau was man will, da sitzt alles perfekt, dazu noch schnell und zu einem super Preis!»</p><footer>Daniel</footer></blockquote></li>
@@ -763,7 +812,6 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0"/><path d="M5.5 12.5a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r=".8"/></svg><span>Kostenloses WLAN</span></li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="5" r="2"/><path d="M9 7v6h5l3 6"/><path d="M13.5 17.5A5 5 0 1 1 7 11"/></svg><span>Rollstuhlgerechter Parkplatz</span></li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="5.5" r="2.5"/><path d="M4 21v-6.5a4.5 4.5 0 0 1 9 0V21"/><circle cx="17" cy="11" r="1.8"/><path d="M14 21v-3.5a3 3 0 0 1 6 0V21"/></svg><span>Kinderfreundlich</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M5.2 9.5l1.2 5 1.3-4 1.3 4 1.2-5"/><path d="M18.3 10.3a2.4 2.4 0 1 0 0 3.4"/></svg><span>WC vorhanden</span></li>
     </ul>
     <p class="gx-src">Angaben aus dem Google-Profil.</p>
   </div>
@@ -774,10 +822,9 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
     <div class="v-logo"><img class="lg-dunkel" src="sindi_logo_sindi_dunkel_800.png" width="705" height="800" alt="" loading="lazy"></div>
     <div class="v-txt">
       <h2 id="h-visit">Besuchen Sie uns</h2>
-      <p class="v-addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Herisauerstrasse 22<br>9200 Gossau</span></p>
-      <p class="v-code"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><span>Plus Code C67X+PH</span></p>
+      <p class="v-addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Herisauerstrasse&nbsp;22<br>9200&nbsp;Gossau</span></p>
       <p class="v-tel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+41713850303">071 385 03 03</a></p>
-      <p class="v-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Di–Fr 09:00–19:00<br>Sa 09:00–18:00</span></p>
+      <p class="v-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Di–Fr 09.00–19.00<br>Sa 09.00–18.00</span></p>
       <a class="v-route" href="https://www.google.com/maps/search/?api=1&amp;query=Coiffeur+Sindi+Herisauerstrasse+22+Gossau" target="_blank" rel="noopener">Route planen →</a>
     </div>
     <a class="gx-frame v-map v-mapimg" href="https://www.google.com/maps/search/?api=1&amp;query=Coiffeur+Sindi+Herisauerstrasse+22+Gossau" target="_blank" rel="noopener" aria-label="In Google Maps öffnen"><img src="sindi_karte.jpg" width="1080" height="760" alt="Karte: Coiffeur Sindi an der Herisauerstrasse 22 in Gossau" loading="lazy"><span class="v-open">In Google Maps öffnen ↗</span></a>
@@ -803,39 +850,46 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   var day=now.getDay(),min=now.getHours()*60+now.getMinutes();
   var H={0:null,1:null,2:[540,1140],3:[540,1140],4:[540,1140],5:[540,1140],6:[540,1080]};
   var names=['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
-  function hh(m){return ('0'+Math.floor(m/60)).slice(-2)+':'+('0'+m%60).slice(-2);}
+  function hh(m){return ('0'+Math.floor(m/60)).slice(-2)+'.'+('0'+m%60).slice(-2);}
+  function hc(m){return ('0'+Math.floor(m/60)).slice(-2)+':'+('0'+m%60).slice(-2);}
   var st=document.getElementById('status'),m1=document.getElementById('st-main'),m2=document.getElementById('st-sub');
   var t=H[day];
   if(t&&min>=t[0]&&min<t[1]){st.classList.add('is-open');m1.textContent='Offen';m2.textContent='bis '+hh(t[1])+' Uhr';}
   else{
-    m1.textContent='Geschlossen';
+    m1.textContent='Geschlossen';st.classList.add('is-closed');
     if(t&&min<t[0]){m2.textContent='öffnet heute '+hh(t[0]);}
     else{for(var i=1;i<=7;i++){var d=(day+i)%7;if(H[d]){m2.textContent='öffnet '+(i===1?'morgen':names[d])+' '+hh(H[d][0]);break;}}}
   }
   /* Datum auf der Wartemarke */
   var wd=['So','Mo','Di','Mi','Do','Fr','Sa'];
-  document.getElementById('t-date').textContent=wd[day]+' '+('0'+now.getDate()).slice(-2)+'.'+('0'+(now.getMonth()+1)).slice(-2)+'.'+now.getFullYear()+' · '+hh(min);
+  document.getElementById('t-date').textContent=wd[day]+' '+('0'+now.getDate()).slice(-2)+'.'+('0'+(now.getMonth()+1)).slice(-2)+'.'+now.getFullYear()+' · '+hc(min);
 
   /* Wartemarke drucken */
   var pr=document.getElementById('preise');
   var rm=false;try{rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(e){}
   function go(){if(pr.classList.contains('printing')||pr.classList.contains('printed'))return;
     pr.classList.add('printing');
-    setTimeout(function(){pr.classList.remove('printing');pr.classList.add('printed');},3650);}
+    setTimeout(function(){pr.classList.add('printed');pr.classList.remove('printing');},2650);}
   if(rm||!('IntersectionObserver' in window)){pr.classList.add('static');}
-  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){setTimeout(go,350);io.disconnect();}});},{threshold:0.01,rootMargin:'0px 0px -12% 0px'});io.observe(pr.querySelector('.housing'));}
+  else{var narrow=window.innerWidth<900;
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){go();io.disconnect();}});},narrow?{threshold:0,rootMargin:'0px 0px -55% 0px'}:{threshold:0.01,rootMargin:'0px 0px -12% 0px'});
+    io.observe(pr.querySelector('.housing'));}
 
   /* Abschnitt: immer eine Zeile (Schrift verkleinern, min. 13 px, sonst kürzen) */
   function fitPick(){var n=document.getElementById('pick-n');if(!n)return;var full=n.getAttribute('data-full')||n.textContent;n.setAttribute('data-full',full);
     n.textContent=full;n.style.fontSize='';var base=parseFloat(getComputedStyle(n).fontSize),fs=base;
     while(n.scrollWidth>n.clientWidth+1&&fs>13){fs-=0.5;n.style.fontSize=fs+'px';}
     if(n.scrollWidth>n.clientWidth+1){n.textContent=full.replace('Augenbrauen','Brauen');}}
-  window.addEventListener('resize',fitPick);setTimeout(fitPick,50);
+  function fitList(){[].forEach.call(document.querySelectorAll('.plist li .n'),function(n){var full=n.getAttribute('data-full')||n.textContent;n.setAttribute('data-full',full);n.textContent=full;
+      var li=n.parentNode,lh=parseFloat(getComputedStyle(li).lineHeight)||22;if(li.getBoundingClientRect().height>lh*1.4)n.textContent=full.replace('Augenbrauen','Brauen');
+      if(li.getBoundingClientRect().height>lh*1.4&&/\+.*\+/.test(full))n.textContent=full.replace('Augenbrauen zupfen','Brauen');});}
+  fitList();window.addEventListener('resize',function(){fitList();fitPick();});setTimeout(function(){fitList();fitPick();},50);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){fitList();fitPick();});
   /* Preiszeile <-> Foto: gemeinsam hervorheben, Auswahl auf den Abschnitt */
   var ks=[].slice.call(document.querySelectorAll('[data-k]')),pickN=document.getElementById('pick-n'),pickP=document.getElementById('pick-p'),stub=document.querySelector('.stub');
   function mark(k,on){ks.forEach(function(e){if(e.getAttribute('data-k')===k)e.classList.toggle('on',on);});}
   function choose(k){var r=document.querySelector('.plist li[data-k="'+k+'"]');if(!r)return;
-    pickN.removeAttribute('data-full');pickN.textContent=r.querySelector('.n').textContent;pickP.textContent=r.querySelector('.p').textContent;fitPick();stub.classList.add('picked');}
+    pickN.removeAttribute('data-full');pickN.textContent=r.querySelector('.n').getAttribute('data-full')||r.querySelector('.n').textContent;pickP.textContent=r.querySelector('.p').textContent;fitPick();stub.classList.add('picked');}
   var canHover=!!(window.matchMedia&&matchMedia('(hover:hover)').matches),tapped=null;
   ks.forEach(function(e){var k=e.getAttribute('data-k');
     e.addEventListener('mouseenter',function(){if(canHover){mark(k,true);choose(k);}});
@@ -852,7 +906,8 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
   /* Bewertungen: kommen beim Scrollen leicht nach vorn */
   var rv=[].slice.call(document.querySelectorAll('.vlist li,.gx-people li,.gx-facts li'));
   if(!rm&&('IntersectionObserver' in window)){rv.forEach(function(x){x.classList.add('rv')});
-    var io3=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var i=rv.indexOf(e.target);e.target.style.transitionDelay=(i%3)*0.12+'s';e.target.classList.add('in');io3.unobserve(e.target);}});},{threshold:0.2});
+    var io3=new IntersectionObserver(function(es){var j=0;es.forEach(function(e){if(e.isIntersecting){var x=e.target,dl=Math.min(j++,2)*0.12;x.style.transitionDelay=dl+'s';x.classList.add('in');io3.unobserve(x);
+      setTimeout(function(){x.style.transitionDelay='';x.classList.add('done');},(dl+0.75)*1000);}});},{threshold:0.05,rootMargin:'0px 0px -4% 0px'});
     rv.forEach(function(x){io3.observe(x)});}
 
   /* Entwurf-Hinweis verdeckt die Fusszeile nicht */
@@ -866,9 +921,9 @@ h1{font-size:clamp(42px,4.5vw,62px);line-height:1.02;letter-spacing:-.035em;font
 
   /* Fotos: schwarzweiss -> Farbe beim Hineinscrollen */
   var ph=[].slice.call(document.querySelectorAll('.ph'));
-  if(rm||!('IntersectionObserver' in window)){ph.forEach(function(p){p.classList.add('in');});}
-  else{var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var i=ph.indexOf(e.target);
-      e.target.querySelector('img').style.transitionDelay=(i%6)*0.22+'s';e.target.classList.add('in');io2.unobserve(e.target);}});},{threshold:0.55});
+  if(rm||!('IntersectionObserver' in window)){ph.forEach(function(p){p.classList.add('in','done');});}
+  else{var io2=new IntersectionObserver(function(es){var j=0;es.forEach(function(e){if(e.isIntersecting){var x=e.target,im=x.querySelector('img'),dl=(j++)*0.18;
+      im.style.transitionDelay=dl+'s';x.classList.add('in');io2.unobserve(x);setTimeout(function(){im.style.transitionDelay='';x.classList.add('done');},(dl+1.45)*1000);}});},{threshold:0.55});
     ph.forEach(function(p){io2.observe(p);});}
 })();
 </script>
