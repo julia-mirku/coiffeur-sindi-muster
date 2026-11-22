@@ -729,6 +729,51 @@ html{-webkit-tap-highlight-color:transparent}
 :focus:not(:focus-visible){outline:none;box-shadow:none}
 a:focus-visible,button:focus-visible,[tabindex]:focus-visible,.v-mapimg:focus-visible{outline:2px solid #CFA95C;outline-offset:3px;border-radius:4px}
 .plist li:focus-visible,.hours .hrow:focus-visible{outline:2px solid #B08A3E;outline-offset:1px}
+/* Besuchen Sie uns: Kassenzettel statt Karte (22.11) */
+.visit .wrap.kz-grid{display:grid;grid-template-columns:minmax(200px,1fr) minmax(0,460px);gap:clamp(32px,6vw,90px);align-items:center;justify-content:center;max-width:1000px}
+.kz-side{display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+.kz-side .v-logo{max-width:220px}
+.kz-side h2{margin:0}
+.kz-wrap{position:relative;padding-top:6px}
+.kz-slot{height:12px;border-radius:8px;background:linear-gradient(180deg,#05080B,#1B2632);box-shadow:inset 0 2px 4px rgba(0,0,0,.6);margin:0 6px -6px;position:relative;z-index:2}
+.kz{position:relative;background:var(--paper);color:var(--paper-ink);font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:15px;line-height:1.6;
+  padding:26px 28px 34px;transform:rotate(.7deg);transform-origin:50% 0;box-shadow:0 26px 40px -24px rgba(0,0,0,.7);
+  -webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/16px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/16px 100%}
+.kz-h{margin:0;text-align:center;font-weight:600;font-size:18px;letter-spacing:.24em;text-transform:uppercase}
+.kz-s{margin:2px 0 0;text-align:center;color:var(--paper-muted);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.kz-r{border:0;border-top:1.5px dashed var(--paper-rule);margin:14px 0}
+.kz-rows{display:grid;grid-template-columns:auto 1fr;column-gap:16px;row-gap:8px;margin:0}
+.kz-rows dt{color:var(--paper-muted);font-size:13px;text-transform:uppercase;letter-spacing:.1em;padding-top:2px}
+.kz-rows dd{margin:0;text-align:right;font-weight:600}
+.kz-rows a{color:inherit;text-decoration:none;border-bottom:1.5px solid #B08A3E}
+.kz-t{margin:0 0 6px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+.kz-days{display:flex!important;flex-direction:column;gap:2px!important;flex-wrap:nowrap}
+.kz .kz-day{display:flex;justify-content:space-between;width:100%;min-width:0;height:auto;padding:2px 8px;margin:0 -8px;width:calc(100% + 16px);
+  font:inherit;font-size:15px;letter-spacing:0;color:var(--paper-ink);background:none;border:1.5px dashed transparent;border-radius:3px;cursor:pointer}
+.kz .kz-day.off{color:var(--paper-muted)}
+.kz .kz-day.sel{border-style:solid;border-color:#B08A3E;color:var(--paper-ink);background:rgba(176,138,62,.12)}
+.kz .kz-out{margin:8px 0 0;font-size:14px;font-weight:600;color:#8A6A2C;text-align:center}
+.kz .kz-out.closed{color:var(--paper-muted)}
+.kz-way{list-style:none;margin:0;padding:0}
+.kz-way li{display:flex;justify-content:space-between;gap:12px}
+.kz-way li span:first-child{color:var(--paper-muted)}
+.kz-bar{display:block;text-decoration:none;color:var(--paper-ink);border:1.5px dashed transparent;border-radius:4px;padding:6px 8px 4px;margin:0 -8px}
+.kz-code{display:block;width:100%;height:46px}
+.kz-bar-t{display:block;text-align:center;font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:13px;margin-top:6px}
+.kz-foot{margin:14px 0 0;text-align:center;color:var(--paper-muted);font-size:13px}
+/* Ausdrucken beim Hineinscrollen, danach erst Hover */
+.js .kz-wrap:not(.out) .kz{clip-path:inset(0 0 100% 0)}
+.kz-wrap.out .kz{clip-path:inset(0 0 -40px 0);transition:clip-path 1.8s cubic-bezier(.25,.6,.3,1)}
+.kz-wrap:not(.done) .kz{pointer-events:none}
+@media (hover:hover) and (pointer:fine){
+  .kz .kz-day:hover:not(.sel){border-color:#B08A3E}
+  .kz-bar:hover{border-color:#B08A3E;background:rgba(176,138,62,.1)}
+  .kz-rows a:hover{color:#8A6A2C}
+}
+@media (max-width:899px){.visit .wrap.kz-grid{grid-template-columns:1fr;gap:28px;justify-items:center}.kz-side .v-logo{max-width:170px}.kz-wrap{width:100%;max-width:460px}}
+@media (max-width:399px){.kz{padding:22px 18px 30px;font-size:14px}.kz .kz-day{font-size:14px}}
+@media (prefers-reduced-motion:reduce){.js .kz-wrap .kz{clip-path:none!important;transition:none}}
+.kz .kz-h,.kz .kz-t{color:var(--paper-ink)!important}.kz .kz-s,.kz .kz-foot,.kz .kz-rows dt,.kz .kz-way li span:first-child{color:var(--paper-muted)!important}.kz .kz-rows dd,.kz .kz-way li span:last-child{color:var(--paper-ink)!important}
 </style>
 </head>
 <body>
@@ -872,16 +917,33 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,.v-mapimg:focus-vi
 </section>
 
 <section class="visit" id="besuch" aria-labelledby="h-visit">
-  <div class="wrap visit-grid">
-    <div class="v-logo"><img class="lg-dunkel" src="sindi_logo_sindi_dunkel_800.png" width="705" height="800" alt="" loading="lazy"></div>
-    <div class="v-txt">
+  <div class="wrap kz-grid">
+    <div class="kz-side">
+      <div class="v-logo"><img class="lg-dunkel" src="sindi_logo_sindi_dunkel_800.png" width="705" height="800" alt="" loading="lazy"></div>
       <h2 id="h-visit">Besuchen Sie uns</h2>
-      <p class="v-addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Herisauerstrasse&nbsp;22<br>9200&nbsp;Gossau</span></p>
-      <p class="v-tel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+41713850303">071 385 03 03</a></p>
-      <div class="v-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div class="v-days"><div class="days" role="radiogroup" aria-label="Öffnungszeiten nach Tag"><button type="button" class="day" role="radio" aria-checked="false" data-d="1">Mo</button><button type="button" class="day" role="radio" aria-checked="false" data-d="2">Di</button><button type="button" class="day" role="radio" aria-checked="false" data-d="3">Mi</button><button type="button" class="day" role="radio" aria-checked="false" data-d="4">Do</button><button type="button" class="day" role="radio" aria-checked="false" data-d="5">Fr</button><button type="button" class="day" role="radio" aria-checked="false" data-d="6">Sa</button><button type="button" class="day" role="radio" aria-checked="false" data-d="0">So</button></div><p class="day-out" id="day-out" aria-live="polite">Di–Fr 09.00–19.00 · Sa 09.00–18.00</p></div></div>
-      <a class="v-route" href="https://www.google.com/maps/search/?api=1&amp;query=Coiffeur+Sindi+Herisauerstrasse+22+Gossau" target="_blank" rel="noopener">Route planen →</a>
     </div>
-    <a class="gx-frame v-map v-mapimg" href="https://www.google.com/maps/search/?api=1&amp;query=Coiffeur+Sindi+Herisauerstrasse+22+Gossau" target="_blank" rel="noopener" aria-label="In Google Maps öffnen"><img src="sindi_karte.jpg" width="1080" height="760" alt="Karte: Coiffeur Sindi an der Herisauerstrasse 22 in Gossau" loading="lazy"></a>
+    <div class="kz-wrap">
+      <div class="kz-slot" aria-hidden="true"></div>
+      <article class="kz" aria-label="Kassenzettel mit Adresse, Öffnungszeiten und Anfahrt">
+        <p class="kz-h">Coiffeur Sindi</p>
+        <p class="kz-s">Ihr Besuch</p>
+        <hr class="kz-r">
+        <dl class="kz-rows">
+          <dt>Adresse</dt><dd>Herisauerstrasse&nbsp;22<br>9200&nbsp;Gossau</dd>
+          <dt>Telefon</dt><dd><a href="tel:+41713850303">071 385 03 03</a></dd>
+        </dl>
+        <hr class="kz-r">
+        <p class="kz-t">Öffnungszeiten</p>
+        <div class="days kz-days" role="radiogroup" aria-label="Öffnungszeiten nach Tag"><button type="button" class="day kz-day off" role="radio" aria-checked="false" data-d="1"><span>Montag</span><span>geschlossen</span></button><button type="button" class="day kz-day" role="radio" aria-checked="false" data-d="2"><span>Dienstag</span><span>09.00–19.00</span></button><button type="button" class="day kz-day" role="radio" aria-checked="false" data-d="3"><span>Mittwoch</span><span>09.00–19.00</span></button><button type="button" class="day kz-day" role="radio" aria-checked="false" data-d="4"><span>Donnerstag</span><span>09.00–19.00</span></button><button type="button" class="day kz-day" role="radio" aria-checked="false" data-d="5"><span>Freitag</span><span>09.00–19.00</span></button><button type="button" class="day kz-day" role="radio" aria-checked="false" data-d="6"><span>Samstag</span><span>09.00–18.00</span></button><button type="button" class="day kz-day off" role="radio" aria-checked="false" data-d="0"><span>Sonntag</span><span>geschlossen</span></button></div>
+        <p class="day-out kz-out" id="day-out" aria-live="polite"></p>
+        <hr class="kz-r">
+        <p class="kz-t">So finden Sie uns</p>
+        <ul class="kz-way"><li><span>Bus</span><span>151 · Postauto 727</span></li><li><span>Haltestelle</span><span>Herisauerstrasse</span></li></ul>
+        <hr class="kz-r">
+        <a class="kz-bar" href="https://www.google.com/maps/dir/?api=1&amp;destination=Herisauerstrasse+22,+9200+Gossau" target="_blank" rel="noopener" aria-label="Route in Google Maps planen"><svg class="kz-code" viewBox="0 0 238 40" preserveAspectRatio="none" fill="currentColor" aria-hidden="true"><rect x="0" width="1" height="40"/><rect x="2" width="2" height="40"/><rect x="5" width="1" height="40"/><rect x="9" width="1" height="40"/><rect x="12" width="2" height="40"/><rect x="15" width="2" height="40"/><rect x="18" width="1" height="40"/><rect x="20" width="2" height="40"/><rect x="24" width="1" height="40"/><rect x="26" width="1" height="40"/><rect x="30" width="2" height="40"/><rect x="33" width="4" height="40"/><rect x="40" width="1" height="40"/><rect x="42" width="3" height="40"/><rect x="48" width="1" height="40"/><rect x="52" width="2" height="40"/><rect x="56" width="1" height="40"/><rect x="58" width="1" height="40"/><rect x="62" width="4" height="40"/><rect x="67" width="1" height="40"/><rect x="70" width="1" height="40"/><rect x="74" width="1" height="40"/><rect x="78" width="1" height="40"/><rect x="82" width="4" height="40"/><rect x="87" width="1" height="40"/><rect x="91" width="2" height="40"/><rect x="94" width="1" height="40"/><rect x="96" width="2" height="40"/><rect x="99" width="2" height="40"/><rect x="102" width="2" height="40"/><rect x="105" width="2" height="40"/><rect x="110" width="2" height="40"/><rect x="114" width="2" height="40"/><rect x="119" width="2" height="40"/><rect x="123" width="1" height="40"/><rect x="125" width="4" height="40"/><rect x="130" width="3" height="40"/><rect x="134" width="1" height="40"/><rect x="138" width="1" height="40"/><rect x="142" width="2" height="40"/><rect x="146" width="3" height="40"/><rect x="151" width="1" height="40"/><rect x="155" width="1" height="40"/><rect x="157" width="2" height="40"/><rect x="161" width="1" height="40"/><rect x="164" width="1" height="40"/><rect x="167" width="2" height="40"/><rect x="170" width="3" height="40"/><rect x="174" width="4" height="40"/><rect x="181" width="2" height="40"/><rect x="185" width="1" height="40"/><rect x="188" width="2" height="40"/><rect x="192" width="2" height="40"/><rect x="196" width="1" height="40"/><rect x="198" width="1" height="40"/><rect x="201" width="3" height="40"/><rect x="205" width="1" height="40"/><rect x="208" width="3" height="40"/><rect x="214" width="3" height="40"/><rect x="219" width="1" height="40"/><rect x="222" width="3" height="40"/><rect x="227" width="1" height="40"/><rect x="230" width="1" height="40"/><rect x="232" width="2" height="40"/><rect x="235" width="2" height="40"/></svg><span class="kz-bar-t">Route planen ↗</span></a>
+        <p class="kz-foot">Danke für Ihren Besuch</p>
+      </article>
+    </div>
   </div>
 </section>
 <footer class="foot">
@@ -979,6 +1041,12 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,.v-mapimg:focus-vi
   var dr=document.querySelector('.draft'),ft=document.querySelector('.foot');
   if(dr&&ft&&('IntersectionObserver' in window)){new IntersectionObserver(function(es){dr.style.opacity=es[0].isIntersecting?'0':'';},{threshold:0}).observe(ft);}
 
+
+  /* Kassenzettel: einmal ausdrucken, wenn sichtbar */
+  (function(){var w=document.querySelector('.kz-wrap');if(!w)return;
+    function fin(){w.classList.add('out');setTimeout(function(){w.classList.add('done');},1850);}
+    if(rm||!('IntersectionObserver' in window)){w.classList.add('out','done');return;}
+    var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){fin();io.disconnect();}},{threshold:0.15});io.observe(w);})();
   /* Impressum / Datenschutz */
   [].forEach.call(document.querySelectorAll('[data-dlg]'),function(b){b.addEventListener('click',function(){var d=document.getElementById(b.getAttribute('data-dlg'));if(d&&d.showModal)d.showModal();});});
   [].forEach.call(document.querySelectorAll('.dlg'),function(d){d.querySelector('.dlg-x').addEventListener('click',function(){d.close();});
